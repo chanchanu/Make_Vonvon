@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for d in det %}
+<h1>{{d.tit}}</h1>
+<form action="{% url 'pybo:quiz' d.id d%}">
+    <input type="submit" value="시작하기">
+</form>
+
+{% endfor %}    
+{% endblock %}

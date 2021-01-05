@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{{det.tit}}</h1>
+<h2>{{det.ques}}</h2>
+<h2>{{det.id}}/10 </h2>
+
+<form action="{% url 'pybo:quiz' det2.id det %}">
+    {% csrf_token %}
+    <input type="submit" value="{{det.content1}}">
+</form>
+<form action="{% url 'pybo:quiz' det2.id det%}">
+    {% csrf_token %}
+    <input type="submit" value="{{det.content2}}">
+</form>
+<form action="{% url 'pybo:quiz' det2.id det%}">
+    {% csrf_token %}
+    <input type="submit" value="{{det.content3}}">
+</form>
+<form action="{% url 'pybo:quiz' det2.id det%}">
+    {% csrf_token %}
+    <input type="submit" value="{{det.content4}}">
+</form>
+
+{% endblock %}

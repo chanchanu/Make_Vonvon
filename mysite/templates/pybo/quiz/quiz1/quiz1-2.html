@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="./quiz1-3">
+    {% csrf_token %}
+    <input type="button" value="{{example1_5}}">
+    <br>
+    <input type="button" value="{{example1_6}}">
+    <br>
+    <input type="button" value="{{example1_7}}">
+    <br>
+    <input type="button" value="{{example1_8}}">
+</form>
+{% endblock %}

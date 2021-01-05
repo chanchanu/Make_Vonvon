@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+{%   for q in quiz %}
+<form action="{% url 'pybo:q' q.title %}">
+    <input type="submit" value="{{q}}">
+</form>
+{% endfor %}
+{% endblock %} 
